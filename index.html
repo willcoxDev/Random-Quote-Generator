@@ -1,0 +1,31 @@
+
+function smallestCommons(arr) {
+  arr = arr.sort();
+  var allNum = [];
+  for(var i=arr[0]; i<arr[1]+1; i++){
+    allNum.push(i);
+  }
+  console.log(allNum);
+  var scm = false;
+  var highestMult = arr[1];
+  var last = allNum.length-1;
+  console.log("last", last);
+  while (scm === false){
+    for(var j=allNum[0]; j<allNum[last]; j++){
+      if(highestMult % allNum[j] === 0){
+        scm = true;
+      }
+      else{
+        scm = false;
+        break;
+      }
+      
+    }
+    highestMult+= arr[1];
+  }  
+ return highestMult-arr[1];   
+  
+}
+
+
+smallestCommons([2, 4]);

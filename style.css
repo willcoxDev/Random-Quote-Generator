@@ -1,0 +1,15 @@
+/* style.css  */
+
+#cover {
+    background-color: #7cd9ed;
+    color: black;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+p {
+    font-style: italic;
+}
